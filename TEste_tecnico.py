@@ -26,7 +26,11 @@ def Fibonacci(n):
     else:
         return f' {n} Nao pertence a sequencia fibonacci'
 
-numero= int(input('Numero:'))
+try:
+    numero= int(input('Numero:'))
+except ValueError as error:
+    print('Valor indetermiando, somente nuemros!!')
+    numero= int(input('Numero:'))
 
 print(Fibonacci(numero))
 
